@@ -1,0 +1,9 @@
+node{
+   agent('SCM Checkout'){
+   git 'https://github.com/manishaAlluri/maven/'
+   }
+   agent('compile-package')
+   {
+   sh 'mvn package'
+   }
+}
