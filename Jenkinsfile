@@ -6,4 +6,7 @@ node{
    def mvnHome = tool name: 'maven3', type: 'maven'
    sh "${mvnHome}/bin/mvn package"
    }
+    stage('deploy-package') {
+   sh ' cp gitproject/target/deploy.war /usr/local/Cellar/tomcat@9/9.0.62/libexec/webapps/'
+   }
 }
