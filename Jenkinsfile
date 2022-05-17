@@ -7,6 +7,6 @@ node{
    sh "${mvnHome}/bin/mvn package"
    }
     stage('deploy-package') {
-   sh 'cp gitproject/target/myweb-0.0.7-SNAPSHOT.war  TOMCAT_DIRECTORY/webapps'
+   sh 'cp /gitproject/target/myweb-0.0.7-SNAPSHOT.war  TOMCAT_DIRECTORY/webapps'
    }
 }
